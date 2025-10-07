@@ -15,10 +15,15 @@
 				background: #333;
 				color: #fff;
 				padding: 50px;
+				display: flex;
+				flex-direction: column;
+				row-gap: 20px;
 			}
 
-			.container {
-				padding: 10px;
+			.btn-container {
+				display: flex;
+				gap: 5px;
+				flex-wrap: wrap;
 			}
 
 			button {
@@ -64,11 +69,12 @@
 
 	<body>
 		<h1>Case Converter</h1>
-		<div class="container">
+		<div class="btn-container">
 			<button onclick="handleUpperCase()">UPPERCASE</button>
 			<button onclick="handleLowerCase()">lowercase</button>
 			<button onclick="handleCapitalize()">Capitalize</button>
 			<button onclick="handleReverse()">Reverse</button>
+			<button onclick="handleCapitalizeEachWord()">Capitalize Each Word</button>
 		</div>
 		<textarea
 			name=""
