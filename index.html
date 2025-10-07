@@ -18,6 +18,7 @@
 				display: flex;
 				flex-direction: column;
 				row-gap: 20px;
+				min-height: 100svh;
 			}
 
 			.btn-container {
@@ -47,10 +48,16 @@
 				width: 100%;
 				min-height: 300px;
 				resize: vertical;
+				font-size: 1rem;
 			}
 
 			textarea:focus {
 				outline: none;
+			}
+
+			.footer {
+				margin-top: auto;
+				text-align: center;
 			}
 
 			@media screen and (max-width: 900px) {
@@ -81,6 +88,17 @@
 			id="display"
 			placeholder="Type something and convert!"
 		></textarea>
+		<footer class="footer">
+			<p class="author">
+				Designed and developed by
+				<a
+					style="color: #fff"
+					href="https://stepandordiai.netlify.app/"
+					target="_blank"
+					>STEPAN DORDIAI</a
+				>
+			</p>
+		</footer>
 		<script src="app.js"></script>
 	</body>
 </html>
