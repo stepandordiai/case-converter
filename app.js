@@ -1,15 +1,15 @@
+const display = document.getElementById("display");
+const textAreaLength = document.getElementById("text-area-length");
+
 const handleUpperCase = () => {
-	const display = document.getElementById("display");
 	display.value = display.value.toUpperCase();
 };
 
 const handleLowerCase = () => {
-	const display = document.getElementById("display");
 	display.value = display.value.toLowerCase();
 };
 
 const handleCapitalize = () => {
-	const display = document.getElementById("display");
 	const displayValue = display.value;
 	const firstLetter = displayValue.split("")[0].toUpperCase();
 	const restText = displayValue.slice(1);
@@ -17,14 +17,12 @@ const handleCapitalize = () => {
 };
 
 const handleReverse = () => {
-	const display = document.getElementById("display");
 	const displayValue = display.value;
 	const reversedTxt = displayValue.split("").reverse().join("");
 	display.value = reversedTxt;
 };
 
 const handleCapitalizeEachWord = () => {
-	const display = document.getElementById("display");
 	const displayValue = display.value;
 	const text = displayValue.split(" ");
 	let txt = [];
@@ -35,3 +33,16 @@ const handleCapitalizeEachWord = () => {
 	});
 	display.value = txt.join(" ");
 };
+
+const checkCharacters = () => {
+	const displayValue = display.value;
+	if (!displayValue.length) {
+		textAreaLength.textContent = "0 characters";
+	} else {
+		textAreaLength.textContent = displayValue.length + " characters";
+	}
+};
+
+checkCharacters();
+
+display.addEventListener("input", checkCharacters);
